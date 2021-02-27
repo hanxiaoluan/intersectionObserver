@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        .slide{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+        }
+        .slide--intro {
+            flex-direction: column;
+        }
+        .box{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 150px;
+            height: 150px;
+            color:white;
+            text-align: center;
+            background-color: deeppink;
+            transition: transform 1s ease-in;
+            margin: 300px 0;
+        }
+        .box--spin.box--visible{
+            transform: rotate(1080deg);
+        }
+        .box--grow.box--visible{
+            transform: scale(1.5);
+        }
+        .box--move-right.box--visible{
+            transform: translateX(50px);
+        }
+
+    </style>
+</head>
+<body>
+    <div class="slide slide--intro">
+        
+        <h1>Intersction Observer Demo</h1>
+        <p>(scroll please)</p>
+      
+        <div class="box box--spin">
+            <span>Spin</span>
+        </div>
+        <div class="box box--grow">
+            <span>Grow</span>
+        </div>
+        <div class="box box--move-right">
+            <span>Move Right</span>
+        </div>
+    </div>
+</body>
+</html>
+
+<script src="./1-动画.js"></script>
